@@ -1,12 +1,12 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "generatedAt": "2026-09-09T15:35:00-03:00",
+  "generatedAt": "2026-09-09T16:10:00-03:00",
   "phase": 1,
   "versions": {
     "adapta": "0.9.3",
     "adaptaCliente": "0.9.3"
   },
-  "source": "PAG/Gavazzi — escopo aprovado pela Kim em 2026-09-09",
+  "source": "PAG/Gavazzi — Fase 1 com 7 SPECs de produto corrigidas pela Kim em 2026-09-09",
   "files": [
     {
       "path": ".claude/settings.json",
@@ -54,6 +54,11 @@
       "sha256": "faeb823ee8e6e6b5ba4a6d14afd882dda313e5491a338930eac114c66d16c5d6"
     },
     {
+      "path": "03_documentos/04-Matriz-SPECs-Fase-1.md",
+      "classification": "template-publico",
+      "sha256": "03036de9906147985186d1f2232ff3b726696c18250d3e31c032efb513d3c649"
+    },
+    {
       "path": "03_documentos/README.md",
       "classification": "template-publico",
       "sha256": "d516a55caa03d11acd4307b64e10bb057d07b6344107823ea8d7f5ca6ba140ae"
@@ -61,12 +66,42 @@
     {
       "path": "04_fase-atual/fase.md",
       "classification": "fase-atual",
-      "sha256": "7a1257211bc40782132d567a0bf33c9797764859a317188b32ca43ed11b17e90"
+      "sha256": "58d2542943227eb517655d10e5c28af480382bb9e1eb5e5fcfc4e2f45cf50a5d"
     },
     {
-      "path": "04_fase-atual/specs/SPEC-1-000-preparacao-do-fluxo.md",
+      "path": "04_fase-atual/specs/SPEC-1-001-acesso-e-papeis.md",
       "classification": "spec-fase-atual",
-      "sha256": "b3e7ad9692aad3fc05633b0e03b86d0f52302db85ee5aa4fe92c194680e63a44"
+      "sha256": "b64e22baed324ca5da54cbef2ca96af04c6853a620b480291b2a144809ad78da"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-002-cadastro-de-projetos-e-disciplinas.md",
+      "classification": "spec-fase-atual",
+      "sha256": "c69a7a18a16ea4bc63c19ca6820b5f0ca334659b473828a8234103653179dc88"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-003-kanban-e-fluxo-configuravel.md",
+      "classification": "spec-fase-atual",
+      "sha256": "ef4ff9d28a4c8faedc0d1b8349cf94fc9eeb631c4817b788524565a687c05a84"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-004-filas-prioridades-e-bloqueios.md",
+      "classification": "spec-fase-atual",
+      "sha256": "335943c5e338f68a912964542dbc1db105f58761bb88e87bfd33de6ccf895e94"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-005-handoffs-e-recuperacao-de-falhas.md",
+      "classification": "spec-fase-atual",
+      "sha256": "36b0c17aa6453c47a914d16afd54b0dca77b587f6f59ed305f69f72efd1d667e"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-006-touch-time-e-baseline-em-modo-sombra.md",
+      "classification": "spec-fase-atual",
+      "sha256": "d40392b3ade0f2f8ac4a00b6780b998b073d155221f790242d910b62dc6ae7c9"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-007-painel-auditoria-adocao-e-exportacao.md",
+      "classification": "spec-fase-atual",
+      "sha256": "cd381611fc3a8333b94223621636012fdbec7a6ffbb8e9cff1093fcc30f24f5f"
     },
     {
       "path": "05_entregas/README.md",
@@ -101,12 +136,12 @@
     {
       "path": "STATUS.md",
       "classification": "template-publico",
-      "sha256": "67d59043699f8a7f8a0803b528be6c9343d03a9dc4f3ca2f88810a03a3c38528"
+      "sha256": "056de1fdd0a5f117acfdb33bec75e2a5c919cac2a015258f3c5b824d65236d78"
     },
     {
       "path": "changelog.md",
       "classification": "template-publico",
-      "sha256": "fb9c5cf1befeed0474c82a81631c289bdc21c4254475bf8d4f02c5544a9681de"
+      "sha256": "6044f209cc9d498a65add45175b91243e97ac3fbf711cd787a0ff9440890d00d"
     }
   ]
 }

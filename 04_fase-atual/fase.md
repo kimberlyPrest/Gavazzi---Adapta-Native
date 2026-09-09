@@ -43,7 +43,7 @@ Tomaz cadastra um projeto real, distribui disciplinas, um projetista recebe a ta
 - **CA-1-05:** bloqueio não é salvo sem motivo, dono e revisão/prazo.
 - **CA-1-06:** touch time pode ser registrado por etapa sem recadastro técnico.
 - **CA-1-07:** painel exibe projetos por etapa, atraso, bloqueio e responsável.
-- **CA-1-08:** pelo menos um projeto piloto percorre o fluxo homologado ponta a ponta em ambiente de validação.
+- **CA-1-08:** pelo menos um projeto piloto percorre o fluxo homologado da Entrada pendente até Aprovado em ambiente de validação.
 - **CA-1-09:** baseline “antes” é coletado em modo sombra, identificado separadamente e é exportável/reproduzível.
 - **CA-1-10:** trilha de auditoria registra mudança de prioridade e responsável.
 - **CA-1-11:** falha de handoff/notificação fica visível, pode ser reprocessada sem duplicar tarefa e não perde histórico.
@@ -51,7 +51,7 @@ Tomaz cadastra um projeto real, distribui disciplinas, um projetista recebe a ta
 - **CA-1-13:** alteração de configuração pode ser revertida com histórico.
 - **CA-1-14:** conta revogada perde acesso; política de credenciais não grava segredo em logs/documentos.
 - **CA-1-15:** retenção, backup e restauração dos dados operacionais têm teste documentado.
-- **CA-1-16:** completude de apontamentos e uso por papel é mensurada; o limiar de adoção para a medição final é definido com o cliente antes da medição final.
+- **CA-1-16:** completude de apontamentos e uso por papel é mensurada; o limiar padrão para leitura conclusiva é 80% de adoção e 80% de completude; abaixo disso, a medição é inconclusiva.
 
 ## Checklist manual
 
@@ -66,8 +66,7 @@ Tomaz cadastra um projeto real, distribui disciplinas, um projetista recebe a ta
 
 Fase encerrada somente após demonstração, evidências dos CAs e aprovação humana. Dados insuficientes não impedem o sistema, mas impedem declarar baseline conclusivo.
 
-## Tasks
 
-| ID | Task | Papel | Entrada | Saída | Critério binário | Prova | Dependências | Estado |
-|---|---|---|---|---|---|---|---|---|
-| T1.0 | Validar fluxo operacional da Fase 1 com Tomaz e coordenadores | Consultora + champion | reunião de 02/09, escopo e fluxo proposto | fluxo configurável homologado, projeto piloto e protocolo de modo sombra registrados | aprovado quando etapas, papéis, prioridade, handoffs, projeto piloto e relógio do baseline estiverem explicitamente registrados | ata de validação + checklist preenchido | disponibilidade de Tomaz e coordenadores | pendente |
+## Tasks vinculadas
+
+Serão geradas por `gerar-tasks` após a aprovação das SPECs.
