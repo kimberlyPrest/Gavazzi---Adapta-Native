@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "adapta-cliente-handoff/v1",
+  "generatedAt": "2026-09-09T15:35:00-03:00",
+  "phase": 1,
+  "versions": {
+    "adapta": "0.9.3",
+    "adaptaCliente": "0.9.3"
+  },
+  "source": "PAG/Gavazzi — escopo aprovado pela Kim em 2026-09-09",
+  "files": [
+    {
+      "path": ".claude/settings.json",
+      "classification": "template-publico",
+      "sha256": "914f1e1b8c481c56f6383fe4ae281cf8304b2f3ed4c9260926dcbe045f93b146"
+    },
+    {
+      "path": "01_projeto/constituicao.md",
+      "classification": "template-publico",
+      "sha256": "9fce8826da6ff918ea3fa3fe07be08ad887143c32ea7771683545f0cadfb30a2"
+    },
+    {
+      "path": "01_projeto/objetivo.md",
+      "classification": "template-publico",
+      "sha256": "2712b8c3eca5a8dd6586ed5486934ae2a445ebe0c140f31241a5b712d249279e"
+    },
+    {
+      "path": "01_projeto/visao-do-projeto.md",
+      "classification": "template-publico",
+      "sha256": "929ddc108aa5d323bab2d481598d9190e66acda73bcb0cf8c283f7ea9a30cc7f"
+    },
+    {
+      "path": "02_reunioes/01-ata-consultoria-2026-09-02.md",
+      "classification": "template-publico",
+      "sha256": "d7f4cd6ae2c38961d7307a81bb53fab9d8ecbf87186cf29187284f9026a7f787"
+    },
+    {
+      "path": "02_reunioes/README.md",
+      "classification": "template-publico",
+      "sha256": "50bc1d72a609e21358dba97647c19bd3c20a7c8cf6dbbfd6112c5711a7f242da"
+    },
+    {
+      "path": "03_documentos/01-PRD.md",
+      "classification": "template-publico",
+      "sha256": "5d8318c5944d8608ee50a4c65ea4991d2b0243553b7d919fd0805048e09f1b25"
+    },
+    {
+      "path": "03_documentos/02-Escopo-Definitivo.md",
+      "classification": "template-publico",
+      "sha256": "b67cc5363b0d533ea083688a10e33f54a6e85b3542fd2ade07caf1486fd3ec3a"
+    },
+    {
+      "path": "03_documentos/03-Matriz-de-Rastreabilidade.md",
+      "classification": "template-publico",
+      "sha256": "faeb823ee8e6e6b5ba4a6d14afd882dda313e5491a338930eac114c66d16c5d6"
+    },
+    {
+      "path": "03_documentos/README.md",
+      "classification": "template-publico",
+      "sha256": "d516a55caa03d11acd4307b64e10bb057d07b6344107823ea8d7f5ca6ba140ae"
+    },
+    {
+      "path": "04_fase-atual/fase.md",
+      "classification": "fase-atual",
+      "sha256": "7a1257211bc40782132d567a0bf33c9797764859a317188b32ca43ed11b17e90"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-000-preparacao-do-fluxo.md",
+      "classification": "spec-fase-atual",
+      "sha256": "b3e7ad9692aad3fc05633b0e03b86d0f52302db85ee5aa4fe92c194680e63a44"
+    },
+    {
+      "path": "05_entregas/README.md",
+      "classification": "template-publico",
+      "sha256": "c08dfa28a3cd04c1946743ca5911f516a860465339aa5d2a3155f00566452034"
+    },
+    {
+      "path": "06_notas/README.md",
+      "classification": "template-publico",
+      "sha256": "6eb7ee403614e317eaa4b5b331c791240171a93d55948597188d216de9fb69b6"
+    },
+    {
+      "path": "06_notas/debug/README.md",
+      "classification": "template-publico",
+      "sha256": "3bb95a5232566d485f61a061a5c896d97af3b8910321690f0f2ccef87028f136"
+    },
+    {
+      "path": "AGENTS.md",
+      "classification": "template-publico",
+      "sha256": "c82e9943ce54b82f5f36b90dfd541695c188e85372eecc130be1e71433751c5b"
+    },
+    {
+      "path": "CLAUDE.md",
+      "classification": "template-publico",
+      "sha256": "3353e3a49d41cc6961d27cfff6ba6e9dca461de1ad43e0855ec9ac2a68d54f3d"
+    },
+    {
+      "path": "README.md",
+      "classification": "template-publico",
+      "sha256": "5b40f55ce359518cde55e5bdb908095b96fb70c97305f5bf30d5a3b3e487345f"
+    },
+    {
+      "path": "STATUS.md",
+      "classification": "template-publico",
+      "sha256": "67d59043699f8a7f8a0803b528be6c9343d03a9dc4f3ca2f88810a03a3c38528"
+    },
+    {
+      "path": "changelog.md",
+      "classification": "template-publico",
+      "sha256": "fb9c5cf1befeed0474c82a81631c289bdc21c4254475bf8d4f02c5544a9681de"
+    }
+  ]
+}
