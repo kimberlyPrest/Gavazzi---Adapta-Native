@@ -64,7 +64,12 @@ Cada pessoa enxerga uma fila acionável de trabalho ordenada por prioridade e pr
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.17 | Implementar fila individual e por equipe com ordenação determinística e filtros | Executor (Maestro) | CA-1-004-01, CA-1-004-02 | TDD GREEN da SPEC-1-004 (ordenação e filtro) | Captura das filas + teste de empate estável | T1.16 concluída | Planejada |
+| T1.18 | Implementar bloqueio com motivo, dono e data de revisão obrigatórios; destaque de bloqueio vencido e resolução auditada | Executor (Maestro) | CA-1-004-03, CA-1-004-04, CA-1-004-05 | TDD GREEN da SPEC-1-004 (ciclo do bloqueio) | Testes do ciclo do bloqueio + histórico | T1.17 concluída | Planejada |
+| T1.19 | Implementar reatribuição e mudança de prioridade auditadas (antes/depois) e visão do coordenador por equipe | Executor (Maestro) | CA-1-004-06, CA-1-004-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-004 (permissão de equipe) | Teste de acesso cruzado negado + histórico de reatribuição | T1.18 concluída | Planejada |
+| T1.20 | Teste humano da SPEC-1-004: registrar, revisar e resolver bloqueio; validar fila e reatribuição | Tomaz + coordenador | Checklist de execução da SPEC-1-004 | Capturas das filas + histórico de bloqueios | Checklist assinado | T1.19 concluída | Planejada |
 
 ## Emendas
 
