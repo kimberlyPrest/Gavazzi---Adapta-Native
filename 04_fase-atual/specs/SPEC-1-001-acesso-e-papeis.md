@@ -72,7 +72,14 @@ Usuários entram na Central com conta própria e veem apenas projetos e ações 
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.01 | Criar fixture de usuários e projetos de teste (5 papéis, 2 projetos, vínculos distintos, 1 conta revogada) | Executor (Maestro) | Fixture carrega e reflete os vínculos descritos na SPEC | Dados/fixtures da SPEC-1-001 | Script/seed executado e listagem das contas criadas | Repo conectado ao Skip; ambiente de validação ativo | Planejada |
+| T1.02 | Implementar login, sessão de 8h com rotação de token e recuperação por token de uso único (15 min) | Executor (Maestro) | CA-1-001-07, CA-1-001-11, CA-1-001-12, CA-1-001-14 | TDD GREEN da SPEC-1-001 (recuperação, senha, sessão) | Suíte de testes passando + captura do login e da redefinição | T1.01 concluída | Planejada |
+| T1.03 | Implementar bloqueio após 5 tentativas inválidas em 15 min e mensagens uniformes de login | Executor (Maestro) | CA-1-001-08, CA-1-001-12, CA-1-001-13 | TDD GREEN da SPEC-1-001 (força bruta) | Teste das 6 tentativas + log de auditoria do bloqueio | T1.02 concluída | Planejada |
+| T1.04 | Implementar matriz de autorização server-side por papel (5 papéis) com 403 auditado | Executor (Maestro) | CA-1-001-01..06, CA-1-001-09 | TDD GREEN da SPEC-1-001 (matriz de autorização) | Relatório da matriz papel×ação + resposta 403 sem vazamento | T1.02 concluída | Planejada |
+| T1.05 | Implementar revogação de conta/sessão e garantia de ausência de segredo em logs | Executor (Maestro) | CA-1-001-05, CA-1-001-10 | TDD REFACTOR/REGRESSÃO da SPEC-1-001 (revogação e varredura de logs) | Log de revogação + varredura de logs sem segredo | T1.04 concluída | Planejada |
+| T1.06 | Teste humano da SPEC-1-001: entrar com os 5 papéis e validar a matriz na interface | Tomaz | Checklist de execução da SPEC-1-001 | Capturas por papel + evidências anexadas | Checklist assinado com capturas | T1.05 concluída | Planejada |
 
 ## Emendas
 
