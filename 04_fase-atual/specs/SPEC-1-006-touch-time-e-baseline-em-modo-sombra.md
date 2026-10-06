@@ -67,7 +67,14 @@ A Central mede touch time por etapa e registra uma linha de base “antes” sep
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.26 | Implementar apontamento de touch time (iniciar/pausar/encerrar, 1 timer por usuário, marca antes/depois) | Executor (Maestro) | CA-1-006-01, CA-1-006-02, CA-1-006-03 | TDD GREEN da SPEC-1-006 (timer) | Testes de sobreposição/pausa + captura | T1.20 concluída | Planejada |
+| T1.27 | Implementar pendência de timer aberto >12h fora do baseline até revisão humana | Executor (Maestro) | CA-1-006-10 | TDD RED/GREEN da SPEC-1-006 (timer abandonado) | Timer >12h marcado como pendência | T1.26 concluída | Planejada |
+| T1.28 | Implementar correção justificada de evento preservando o original e separação antes/depois | Executor (Maestro) | CA-1-006-04, CA-1-006-05 | TDD REFACTOR/REGRESSÃO da SPEC-1-006 (edição e grupos) | Evento original preservado + grupos separados | T1.27 concluída | Planejada |
+| T1.29 | Implementar importação CSV histórica com validação por linha, origem/arquivo/data e rejeição de linha inválida | Executor (Maestro) | CA-1-006-09 | TDD GREEN da SPEC-1-006 (importação por linha) | Relatório de importação com erro por linha | T1.26 concluída | Planejada |
+| T1.30 | Implementar agregação do baseline com amostra/exclusões, marcação de inconclusivo e export CSV reproduzível | Executor (Maestro) | CA-1-006-06, CA-1-006-07, CA-1-006-08 | TDD GREEN da SPEC-1-006 (agregação e CSV) | CSV conferindo com o painel + cenário inconclusivo | T1.28 e T1.29 concluídas | Planejada |
+| T1.31 | Teste humano da SPEC-1-006: apontar tempo em etapa real e conferir CSV do baseline | Tomaz + projetista | Checklist de execução da SPEC-1-006 | CSV + vídeo do apontamento | Checklist assinado | T1.30 concluída | Planejada |
 
 ## Emendas
 
