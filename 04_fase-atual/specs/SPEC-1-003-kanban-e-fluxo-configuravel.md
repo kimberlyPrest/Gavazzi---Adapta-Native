@@ -66,7 +66,13 @@ Projetos e disciplinas percorrem um Kanban operacional com estados claros e tran
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.12 | Implementar Kanban com os 6 estados da Fase 1 + Bloqueado, filtros e ordenação | Executor (Maestro) | CA-1-003-01 | TDD GREEN da SPEC-1-003 (Kanban mínimo) | Captura do Kanban com cards de teste | T1.11 concluída | Planejada |
+| T1.13 | Implementar transições validadas server-side (papel + estado) com histórico anterior/novo, autor e horário | Executor (Maestro) | CA-1-003-02, CA-1-003-03 | TDD GREEN da SPEC-1-003 (máquina de estados) | Suíte de transições + export do histórico | T1.12 concluída | Planejada |
+| T1.14 | Implementar configuração administrativa de etapas (nome/ordem/ativo) versionada e reversível | Executor (Maestro) | CA-1-003-05, CA-1-003-06, CA-1-003-08 | TDD REFACTOR/REGRESSÃO da SPEC-1-003 (rollback de configuração) | Restauração de versão anterior preservando cards | T1.13 concluída | Planejada |
+| T1.15 | Implementar campos obrigatórios por transição configuráveis pelo administrador | Executor (Maestro) | CA-1-003-09 | TDD GREEN da SPEC-1-003 (critérios de avanço) | Teste de avanço sem campo obrigatório rejeitado | T1.14 concluída | Planejada |
+| T1.16 | Teste humano da SPEC-1-003: projeto com 2 disciplinas percorre Entrada pendente → Aprovado | Tomaz + coordenador | CA-1-003-07 | Vídeo do fluxo ponta a ponta | Vídeo + checklist assinado | T1.15 concluída | Planejada |
 
 ## Emendas
 
