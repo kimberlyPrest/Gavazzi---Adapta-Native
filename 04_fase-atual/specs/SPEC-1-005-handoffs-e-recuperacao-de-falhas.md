@@ -66,7 +66,13 @@ Concluir uma etapa cria exatamente uma pendência na fila do próximo responsáv
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.21 | Implementar handoff por transição com criação idempotente da próxima atividade e fallback ao coordenador | Executor (Maestro) | CA-1-005-01, CA-1-005-02, CA-1-005-03, CA-1-005-06 | TDD GREEN da SPEC-1-005 (handoff e idempotência) | Testes de duplicação/concorrência sem duplicata | T1.20 concluída | Planejada |
+| T1.22 | Implementar caixa de falhas visível com motivo/tentativas e reprocessamento restrito a coordenador/administrador | Executor (Maestro) | CA-1-005-04, CA-1-005-05, CA-1-005-09 | TDD GREEN da SPEC-1-005 (falha e reprocessamento) | Captura da fila de falhas + log de reprocessamento | T1.21 concluída | Planejada |
+| T1.23 | Implementar notificação interna persistente (não lida → lida) vinculada à atividade correta | Executor (Maestro) | CA-1-005-08 | TDD GREEN da SPEC-1-005 (notificação) | Teste de leitura registrada + captura | T1.21 concluída | Planejada |
+| T1.24 | Implementar cancelamento/devolução de handoff com justificativa preservando eventos | Executor (Maestro) | CA-1-005-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-005 (rollback) | Histórico íntegro após devolução | T1.22 concluída | Planejada |
+| T1.25 | Teste humano da SPEC-1-005: simular sucesso, repetição, falha e reprocessamento no fluxo real | Coordenador | Checklist de execução da SPEC-1-005 | Testes de idempotência + captura da fila de falhas | Checklist assinado | T1.24 concluída | Planejada |
 
 ## Emendas
 
