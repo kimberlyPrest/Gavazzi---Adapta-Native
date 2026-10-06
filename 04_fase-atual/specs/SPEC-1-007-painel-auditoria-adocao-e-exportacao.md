@@ -71,7 +71,15 @@ Alessandro e Tomaz acompanham projetos, atrasos, bloqueios, carga, tempos e comp
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.32 | Implementar painel executivo com cards, filtros e drill-down até os registros origem | Executor (Maestro) | CA-1-007-01, CA-1-007-02, CA-1-007-03 | TDD GREEN da SPEC-1-007 (painel e drill-down) | Captura do painel + estado vazio explícito | T1.31 concluída | Planejada |
+| T1.33 | Implementar fórmulas de completude e adoção com limiar 80% e marcação de inconclusivo | Executor (Maestro) | CA-1-007-05, CA-1-007-06, CA-1-007-13, CA-1-007-14 | TDD GREEN da SPEC-1-007 (fixtures 79%/80%) | Teste 79% inconclusivo / 80% conclusivo | T1.32 concluída | Planejada |
+| T1.34 | Implementar export CSV autorizado e auditado (admin/coordenador no escopo) reconciliando com o painel | Executor (Maestro) | CA-1-007-04, CA-1-007-10 | TDD GREEN da SPEC-1-007 (export e auditoria) | CSV reconciliado + log de exportação | T1.33 concluída | Planejada |
+| T1.35 | Implementar log append-only consultável por papel com retenção de 24 meses | Executor (Maestro) | CA-1-007-07, CA-1-007-11 | TDD RED/GREEN da SPEC-1-007 (adulteração de log) | Tentativa de alteração negada + política de retenção | T1.32 concluída | Planejada |
+| T1.36 | Implementar backup criptografado com chave em secret externo, retenção de 90 dias e restauração isolada | Executor (Maestro) | CA-1-007-08, CA-1-007-12 | TDD REFACTOR/REGRESSÃO da SPEC-1-007 (restore) | Relatório de restauração em ambiente isolado | T1.35 concluída | Planejada |
+| T1.37 | Garantir que executivo não altera dados pelo painel (somente leitura) | Executor (Maestro) | CA-1-007-09 | TDD RED da SPEC-1-007 (tentativa de export/alteração executivo) | Tentativa negada e auditada | T1.33 concluída | Planejada |
+| T1.38 | Teste humano da SPEC-1-007: conferir painel×CSV, filtros e evidência de backup/restauração | Alessandro + Tomaz | Checklist de execução da SPEC-1-007 | Capturas + CSV reconciliado + relatório de restore | Checklist assinado | T1.36 e T1.37 concluídas | Planejada |
 
 ## Emendas
 
