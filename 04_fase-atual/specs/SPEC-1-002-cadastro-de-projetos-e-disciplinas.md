@@ -65,7 +65,13 @@ Tomaz cadastra um projeto técnico com cliente, tipologia, disciplinas, prazo e 
 
 ## Tasks vinculadas
 
-<!-- Preenchida por gerar-tasks após revisão das SPECs. -->
+| ID | Task | Dono | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
+|---|---|---|---|---|---|---|---|
+| T1.07 | Criar fixture de cliente, disciplinas e projetos semelhantes (1 cliente, 2 projetos, 4 disciplinas) | Executor (Maestro) | Fixture carrega e reflete os dados descritos na SPEC | Dados/fixtures da SPEC-1-002 | Seed executado + listagem | T1.06 concluída | Planejada |
+| T1.08 | Implementar cadastro de cliente/projeto/disciplinas com campos mínimos, responsável por disciplina e detalhe 360º | Executor (Maestro) | CA-1-002-01, CA-1-002-02, CA-1-002-03 | TDD GREEN da SPEC-1-002 (cadastro vertical) | Suíte passando + captura do detalhe do projeto | T1.07 concluída | Planejada |
+| T1.09 | Implementar alerta de duplicidade, edição auditada e arquivamento sem apagar histórico | Executor (Maestro) | CA-1-002-04, CA-1-002-05, CA-1-002-06 | TDD REFACTOR/REGRESSÃO da SPEC-1-002 (duplicidade e arquivamento) | Logs de edição/arquivamento + alerta de duplicidade | T1.08 concluída | Planejada |
+| T1.10 | Implementar autorização de criação/edição e validação de link de entrada (somente HTTPS, sem fetch no servidor) | Executor (Maestro) | CA-1-002-07, CA-1-002-08 | TDD RED/GREEN da SPEC-1-002 (enumeração e links inseguros) | Testes de URL insegura rejeitada + 403 de enumeração | T1.08 concluída | Planejada |
+| T1.11 | Teste humano da SPEC-1-002: cadastrar projeto real com duas disciplinas e validar duplicidade/edição | Tomaz | Checklist de execução da SPEC-1-002 | Vídeo curto do cadastro + histórico exportado | Checklist assinado | T1.10 concluída | Planejada |
 
 ## Emendas
 
