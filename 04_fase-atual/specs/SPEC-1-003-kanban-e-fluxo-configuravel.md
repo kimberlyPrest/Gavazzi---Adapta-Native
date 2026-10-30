@@ -80,8 +80,8 @@ Projetos e disciplinas percorrem um Kanban operacional com estados claros e tran
 - **Quando:** quando T1.12 a T1.15 estiverem no ar. T1.16 é este teste.
 - **Quem testa:** Tomaz e um coordenador.
 - **Passos:** 1) abrir o Kanban e conferir os seis estados da fase mais o Bloqueado, com os cards do projeto piloto; 2) mover o projeto com duas disciplinas de Entrada pendente até Aguardando revisão; 3) aprovar como revisor e conferir o histórico com estado anterior, novo, autor e horário; 4) reabrir o projeto aprovado com justificativa, como coordenador, e conferir que só o coordenador consegue; 5) renomear e reordenar uma etapa e restaurar a versão anterior, conferindo que nenhum card nem histórico se perdeu.
-- **Resultado esperado:** o projeto percorre o fluxo da fase de Entrada pendente até Aprovado em demonstração; a transição inválida é recusada; a configuração volta atrás sem perder card (CA-1-003-01 a CA-1-003-07).
-- **Evidência do aceite:** mensagem do Tomaz confirmando o percurso completo e a restauração da configuração, registrada no changelog.
+- **Resultado esperado:** o projeto percorre o fluxo da fase de Entrada pendente até Aprovado em demonstração; a transição inválida é recusada; a configuração volta atrás sem perder card (CA-1-003-01 a CA-1-003-03 e CA-1-003-05 a CA-1-003-07; CA-1-003-04, CA-1-003-08 e CA-1-003-09 fecham pela prova automática da SPEC).
+- **Evidência do aceite:** checklist de execução da SPEC-1-003 assinado, com o vídeo do fluxo ponta a ponta, e mensagem do Tomaz confirmando o teste e a continuidade, registrada no changelog.
 
 ## Emendas
 

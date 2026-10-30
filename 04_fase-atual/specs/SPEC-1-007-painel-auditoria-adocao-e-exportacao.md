@@ -87,8 +87,8 @@ Alessandro e Tomaz acompanham projetos, atrasos, bloqueios, carga, tempos e comp
 - **Quando:** quando T1.32 a T1.37 estiverem no ar. T1.38 é este teste.
 - **Quem testa:** Alessandro e Tomaz.
 - **Passos:** 1) abrir o painel e filtrar por período, etapa, responsável e disciplina; 2) clicar numa métrica do painel e chegar aos registros que a compõem; 3) exportar o CSV do mesmo filtro e reconciliar com os totais do painel; 4) conferir completude e adoção com os dois lados do limiar de 80% e o período sem dados (estado vazio); 5) abrir o relatório de backup e restauração e conferir a tentativa de alterar o log negada.
-- **Resultado esperado:** o painel responde por papel com drill-down; o CSV bate com o painel; completude e adoção respeitam o limiar de 80%; o log é append-only e o backup tem relatório de restauração (CA-1-007-01 a CA-1-007-14).
-- **Evidência do aceite:** mensagem do Alessandro confirmando o painel, o CSV e o relatório de restauração, registrada no changelog.
+- **Resultado esperado:** o painel responde por papel com drill-down; o CSV bate com o painel; completude e adoção respeitam o limiar de 80%; o log é append-only e o backup tem relatório de restauração (CA-1-007-01 a CA-1-007-08, CA-1-007-11, CA-1-007-13 e CA-1-007-14; CA-1-007-09, CA-1-007-10 e CA-1-007-12 fecham pela prova automática da SPEC).
+- **Evidência do aceite:** checklist de execução da SPEC-1-007 assinado, com as capturas, o CSV reconciliado e o relatório de restauração, e mensagem do Alessandro confirmando o teste e a continuidade, registrada no changelog.
 
 ## Emendas
 

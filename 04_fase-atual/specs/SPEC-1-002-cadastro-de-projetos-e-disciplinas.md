@@ -77,10 +77,10 @@ Tomaz cadastra um projeto técnico com cliente, tipologia, disciplinas, prazo e 
 
 - **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
 - **Quando:** quando T1.07 a T1.10 estiverem no ar. T1.11 é este teste.
-- **Quem testa:** Tomaz, com o Felipe acompanhando o cadastro do projeto piloto.
+- **Quem testa:** Tomaz, no cadastro do projeto piloto.
 - **Passos:** 1) cadastrar um cliente e um projeto real com tipologia, prazo, duas disciplinas e o responsável de cada uma; 2) tentar salvar o mesmo projeto sem disciplina e sem prazo e conferir a recusa com a mensagem do campo; 3) cadastrar de novo o mesmo nome com outro cliente e conferir o alerta de possível duplicidade antes de salvar; 4) editar o prazo e o responsável e conferir no histórico o antes, o depois, o autor e o horário; 5) arquivar o projeto e conferir que ele sai da fila ativa e que o histórico continua lá.
 - **Resultado esperado:** o projeto nasce completo e aparece no detalhe e na listagem; a duplicidade avisa antes de salvar; a edição fica auditada e o arquivamento não apaga nada (CA-1-002-01 a CA-1-002-06).
-- **Evidência do aceite:** mensagem do Tomaz confirmando o cadastro do projeto piloto e o alerta de duplicidade, registrada no changelog.
+- **Evidência do aceite:** checklist de execução da SPEC-1-002 assinado, com o vídeo do cadastro e o histórico exportado, e mensagem do Tomaz confirmando o teste e a continuidade, registrada no changelog.
 
 ## Emendas
 

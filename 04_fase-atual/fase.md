@@ -115,4 +115,9 @@ Fase encerrada somente após demonstração, evidências dos CAs e aprovação h
 | T1.38 | Teste humano da SPEC-1-007: conferir painel×CSV, filtros e evidência de backup/restauração | Alessandro + Tomaz | SPEC-1-007 | Checklist de execução da SPEC-1-007 | Capturas + CSV reconciliado + relatório de restore | Checklist assinado | T1.36 e T1.37 concluídas | Planejada |
 | T1.39 | Demonstração final da Fase 1: projeto piloto percorre o fluxo completo com handoffs, bloqueio e touch time | Tomaz + Kim | Fase 1 | CA-1-08 | Demonstração visível da fase | Vídeo da demonstração + evidências dos CAs | T1.38 concluída | Planejada |
 | T1.40 | Consolidar baseline “antes” em modo sombra e declarar (ou marcar inconclusivo) com o cliente | Kim + Tomaz | Fase 1 | CA-1-09, CA-1-16 | Saída da fase (baseline conclusivo ou inconclusivo) | Dataset baseline + decisão registrada | T1.39 concluída | Planejada |
-- 30/10: teste do cliente passa a ser por SPEC (sete na fase, um por SPEC). O ritmo deixa de pedir autorização e teste a cada task; a demonstração final (T1.39) continua sendo o aceite da fase.
+
+## Emendas
+
+| Data | Origem do sinal | Seção | Resumo |
+|---|---|---|---|
+| 30/10/2026 | Teste por SPEC | `## Teste do cliente` | Teste por SPEC, não por task: sete testes na fase, um por SPEC; o ritmo não pede autorização nem teste a cada task e a demonstração final (T1.39) continua sendo o aceite da fase. |

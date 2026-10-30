@@ -78,10 +78,10 @@ Concluir uma etapa cria exatamente uma pendência na fila do próximo responsáv
 
 - **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
 - **Quando:** quando T1.21 a T1.24 estiverem no ar. T1.25 é este teste.
-- **Quem testa:** O coordenador da equipe do projeto piloto, com o projetista que recebe a atividade.
+- **Quem testa:** o coordenador da equipe do projeto piloto, com o projetista que recebe a atividade.
 - **Passos:** 1) concluir a etapa do projetista com o próximo responsável definido e conferir a atividade na fila dele; 2) repetir a mesma conclusão (duplo clique ou reenvio) e conferir que não aparece atividade duplicada; 3) simular um destino ausente e conferir a pendência na caixa de falhas do coordenador, com motivo e tentativas; 4) corrigir o destino e reprocessar, conferindo que a atividade é entregue uma única vez e o histórico fica inteiro; 5) devolver um handoff com justificativa e conferir que os eventos anteriores continuam registrados.
-- **Resultado esperado:** cada conclusão gera exatamente uma atividade seguinte; a falha fica visível e é recuperável sem duplicar; a devolução preserva o histórico (CA-1-005-01 a CA-1-005-09).
-- **Evidência do aceite:** mensagem do coordenador confirmando sucesso, repetição, falha, reprocessamento e devolução, registrada no changelog.
+- **Resultado esperado:** cada conclusão gera exatamente uma atividade seguinte; a falha fica visível e é recuperável sem duplicar; a devolução preserva o histórico (CA-1-005-01 a CA-1-005-05 e CA-1-005-07; CA-1-005-06, CA-1-005-08 e CA-1-005-09 fecham pela prova automática da SPEC).
+- **Evidência do aceite:** checklist de execução da SPEC-1-005 assinado, com as capturas da fila de falhas e o histórico íntegro, e mensagem do coordenador confirmando o teste e a continuidade, registrada no changelog.
 
 ## Emendas
 

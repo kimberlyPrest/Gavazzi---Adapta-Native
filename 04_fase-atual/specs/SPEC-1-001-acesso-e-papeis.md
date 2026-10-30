@@ -84,11 +84,11 @@ Usuários entram na Central com conta própria e veem apenas projetos e ações 
 ## Teste humano do cliente
 
 - **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
-- **Quando:** quando T1.01 a T1.05 estiverem no ar. É o ponto de aprovação desta SPEC, porque a conta e o login são o que todos passam a usar; T1.06 é este teste.
-- **Quem testa:** Tomaz (administrador) e Felipe (especialista técnico), cada um com a própria conta.
-- **Passos:** 1) abrir o convite recebido por e-mail, definir a senha e entrar; 2) com a conta do Tomaz, abrir Administração e conferir a lista de usuários; 3) com a conta do Felipe, abrir um projeto vinculado e conferir que Administração não aparece; 4) revogar a conta do Felipe e conferir que a sessão dele cai na próxima ação e que o histórico dele permanece.
-- **Resultado esperado:** os dois entram com a própria conta; o administrador administra e o outro não; a revogação corta o acesso sem apagar histórico (CA-1-001-01, CA-1-001-05, CA-1-001-09).
-- **Evidência do aceite:** mensagem do Tomaz confirmando que entrou, administrou e revogou, registrada no changelog.
+- **Quando:** quando T1.01 a T1.05 estiverem no ar; T1.06 é este teste.
+- **Quem testa:** Tomaz (administrador), com a própria conta.
+- **Passos:** 1) abrir o convite recebido por e-mail, definir a senha e entrar com a própria conta; 2) abrir Administração e conferir as cinco contas de teste com papel e vínculo de projeto; 3) abrir a própria fila e um projeto vinculado e conferir que só aparecem os projetos do seu vínculo; 4) revogar uma das contas de teste e conferir que ela perde o acesso na próxima ação e que o histórico permanece.
+- **Resultado esperado:** Tomaz entra com a própria conta, vê só os projetos do seu vínculo, administra contas e revoga uma conta de teste sem apagar histórico; a matriz dos cinco papéis é comprovada na prova automática com as contas de fixture (CA-1-001-05 e CA-1-001-09; as demais CAs, inclusive a matriz dos cinco papéis, fecham pela prova automática da SPEC).
+- **Evidência do aceite:** checklist de execução da SPEC-1-001 assinado, com as capturas por papel, e mensagem do Tomaz confirmando o teste e a continuidade, registrada no changelog.
 
 ## Emendas
 
