@@ -7,3 +7,6 @@
 **Consultora:** Kim
 **Stack inicial permitida:** aplicação web com autenticação, banco de dados e integrações/automação somente após validação técnica.
 **Repo do cliente:** https://github.com/kimberlyPrest/Gavazzi---Adapta-Native.git
+
+## Ritmo
+Tasks em sequência, sem pedir autorização nem teste entre elas. O teste do cliente é por SPEC, um roteiro por SPEC, quando todas as tasks dela estiverem no ar. Regra completa em `AGENTS.md`.

@@ -74,7 +74,17 @@ Projetos e disciplinas percorrem um Kanban operacional com estados claros e tran
 | T1.15 | Implementar campos obrigatórios por transição configuráveis pelo administrador | Executor (Maestro) | CA-1-003-09 | TDD GREEN da SPEC-1-003 (critérios de avanço) | Teste de avanço sem campo obrigatório rejeitado | T1.14 concluída | Planejada |
 | T1.16 | Teste humano da SPEC-1-003: projeto com 2 disciplinas percorre Entrada pendente → Aprovado | Tomaz + coordenador | CA-1-003-07 | Vídeo do fluxo ponta a ponta | Vídeo + checklist assinado | T1.15 concluída | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.12 a T1.15 estiverem no ar. T1.16 é este teste.
+- **Quem testa:** Tomaz e um coordenador.
+- **Passos:** 1) abrir o Kanban e conferir os seis estados da fase mais o Bloqueado, com os cards do projeto piloto; 2) mover o projeto com duas disciplinas de Entrada pendente até Aguardando revisão; 3) aprovar como revisor e conferir o histórico com estado anterior, novo, autor e horário; 4) reabrir o projeto aprovado com justificativa, como coordenador, e conferir que só o coordenador consegue; 5) renomear e reordenar uma etapa e restaurar a versão anterior, conferindo que nenhum card nem histórico se perdeu.
+- **Resultado esperado:** o projeto percorre o fluxo da fase de Entrada pendente até Aprovado em demonstração; a transição inválida é recusada; a configuração volta atrás sem perder card (CA-1-003-01 a CA-1-003-07).
+- **Evidência do aceite:** mensagem do Tomaz confirmando o percurso completo e a restauração da configuração, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-003 / T1.16 | Seção `## Teste humano do cliente`: um roteiro único (percurso completo, reabertura e rollback de etapa). T1.16 é este teste. |

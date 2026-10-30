@@ -81,7 +81,17 @@ Alessandro e Tomaz acompanham projetos, atrasos, bloqueios, carga, tempos e comp
 | T1.37 | Garantir que executivo não altera dados pelo painel (somente leitura) | Executor (Maestro) | CA-1-007-09 | TDD RED da SPEC-1-007 (tentativa de export/alteração executivo) | Tentativa negada e auditada | T1.33 concluída | Planejada |
 | T1.38 | Teste humano da SPEC-1-007: conferir painel×CSV, filtros e evidência de backup/restauração | Alessandro + Tomaz | Checklist de execução da SPEC-1-007 | Capturas + CSV reconciliado + relatório de restore | Checklist assinado | T1.36 e T1.37 concluídas | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.32 a T1.37 estiverem no ar. T1.38 é este teste.
+- **Quem testa:** Alessandro e Tomaz.
+- **Passos:** 1) abrir o painel e filtrar por período, etapa, responsável e disciplina; 2) clicar numa métrica do painel e chegar aos registros que a compõem; 3) exportar o CSV do mesmo filtro e reconciliar com os totais do painel; 4) conferir completude e adoção com os dois lados do limiar de 80% e o período sem dados (estado vazio); 5) abrir o relatório de backup e restauração e conferir a tentativa de alterar o log negada.
+- **Resultado esperado:** o painel responde por papel com drill-down; o CSV bate com o painel; completude e adoção respeitam o limiar de 80%; o log é append-only e o backup tem relatório de restauração (CA-1-007-01 a CA-1-007-14).
+- **Evidência do aceite:** mensagem do Alessandro confirmando o painel, o CSV e o relatório de restauração, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-007 / T1.38 | Seção `## Teste humano do cliente`: um roteiro único (painel, drill-down, CSV, limiar e backup). T1.38 é este teste. |

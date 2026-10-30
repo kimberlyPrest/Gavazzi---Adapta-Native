@@ -81,7 +81,17 @@ Usuários entram na Central com conta própria e veem apenas projetos e ações 
 | T1.05 | Implementar revogação de conta/sessão e garantia de ausência de segredo em logs | Executor (Maestro) | CA-1-001-05, CA-1-001-10 | TDD REFACTOR/REGRESSÃO da SPEC-1-001 (revogação e varredura de logs) | Log de revogação + varredura de logs sem segredo | T1.04 concluída | Planejada |
 | T1.06 | Teste humano da SPEC-1-001: entrar com os 5 papéis e validar a matriz na interface | Tomaz | Checklist de execução da SPEC-1-001 | Capturas por papel + evidências anexadas | Checklist assinado com capturas | T1.05 concluída | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.01 a T1.05 estiverem no ar. É o ponto de aprovação desta SPEC, porque a conta e o login são o que todos passam a usar; T1.06 é este teste.
+- **Quem testa:** Tomaz (administrador) e Felipe (especialista técnico), cada um com a própria conta.
+- **Passos:** 1) abrir o convite recebido por e-mail, definir a senha e entrar; 2) com a conta do Tomaz, abrir Administração e conferir a lista de usuários; 3) com a conta do Felipe, abrir um projeto vinculado e conferir que Administração não aparece; 4) revogar a conta do Felipe e conferir que a sessão dele cai na próxima ação e que o histórico dele permanece.
+- **Resultado esperado:** os dois entram com a própria conta; o administrador administra e o outro não; a revogação corta o acesso sem apagar histórico (CA-1-001-01, CA-1-001-05, CA-1-001-09).
+- **Evidência do aceite:** mensagem do Tomaz confirmando que entrou, administrou e revogou, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-001 / T1.06 | Seção `## Teste humano do cliente`: um roteiro único (login, administração e revogação). T1.06 passa a ser este teste. |

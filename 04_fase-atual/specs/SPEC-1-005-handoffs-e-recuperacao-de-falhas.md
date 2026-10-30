@@ -74,7 +74,17 @@ Concluir uma etapa cria exatamente uma pendência na fila do próximo responsáv
 | T1.24 | Implementar cancelamento/devolução de handoff com justificativa preservando eventos | Executor (Maestro) | CA-1-005-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-005 (rollback) | Histórico íntegro após devolução | T1.22 concluída | Planejada |
 | T1.25 | Teste humano da SPEC-1-005: simular sucesso, repetição, falha e reprocessamento no fluxo real | Coordenador | Checklist de execução da SPEC-1-005 | Testes de idempotência + captura da fila de falhas | Checklist assinado | T1.24 concluída | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.21 a T1.24 estiverem no ar. T1.25 é este teste.
+- **Quem testa:** O coordenador da equipe do projeto piloto, com o projetista que recebe a atividade.
+- **Passos:** 1) concluir a etapa do projetista com o próximo responsável definido e conferir a atividade na fila dele; 2) repetir a mesma conclusão (duplo clique ou reenvio) e conferir que não aparece atividade duplicada; 3) simular um destino ausente e conferir a pendência na caixa de falhas do coordenador, com motivo e tentativas; 4) corrigir o destino e reprocessar, conferindo que a atividade é entregue uma única vez e o histórico fica inteiro; 5) devolver um handoff com justificativa e conferir que os eventos anteriores continuam registrados.
+- **Resultado esperado:** cada conclusão gera exatamente uma atividade seguinte; a falha fica visível e é recuperável sem duplicar; a devolução preserva o histórico (CA-1-005-01 a CA-1-005-09).
+- **Evidência do aceite:** mensagem do coordenador confirmando sucesso, repetição, falha, reprocessamento e devolução, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-005 / T1.25 | Seção `## Teste humano do cliente`: um roteiro único (handoff, repetição, falha e devolução). T1.25 é este teste. |

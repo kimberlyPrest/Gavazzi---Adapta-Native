@@ -76,7 +76,17 @@ A Central mede touch time por etapa e registra uma linha de base “antes” sep
 | T1.30 | Implementar agregação do baseline com amostra/exclusões, marcação de inconclusivo e export CSV reproduzível | Executor (Maestro) | CA-1-006-06, CA-1-006-07, CA-1-006-08 | TDD GREEN da SPEC-1-006 (agregação e CSV) | CSV conferindo com o painel + cenário inconclusivo | T1.28 e T1.29 concluídas | Planejada |
 | T1.31 | Teste humano da SPEC-1-006: apontar tempo em etapa real e conferir CSV do baseline | Tomaz + projetista | Checklist de execução da SPEC-1-006 | CSV + vídeo do apontamento | Checklist assinado | T1.30 concluída | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.26 a T1.30 estiverem no ar. T1.31 é este teste, na mesma rodada em que o baseline é lido; T1.40 continua sendo a decisão sobre a suficiência da amostra.
+- **Quem testa:** Tomaz e o projetista do projeto piloto.
+- **Passos:** 1) iniciar o apontamento numa etapa real, pausar e encerrar, e conferir o tempo na etapa; 2) tentar abrir um segundo apontamento e conferir a recusa; 3) corrigir um apontamento com motivo e conferir que o original continua registrado e que os dados do fluxo novo não entram no grupo "antes"; 4) baixar o CSV do baseline e conferir os totais e os filtros com o que o painel mostra; 5) conferir que uma amostra pequena aparece como inconclusiva, sem nota individual de desempenho.
+- **Resultado esperado:** o touch time por etapa é medido sem sobreposição; a correção preserva o original; o CSV reproduz o painel e a amostra insuficiente fica inconclusiva (CA-1-006-01 a CA-1-006-10).
+- **Evidência do aceite:** mensagem do Tomaz confirmando o apontamento e o CSV conferido, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-006 / T1.31 | Seção `## Teste humano do cliente`: um roteiro único (apontamento, correção e CSV do baseline). T1.31 é este teste. |

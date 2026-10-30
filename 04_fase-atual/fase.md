@@ -34,6 +34,10 @@ Checklist técnico detalhado, biblioteca de padrões, plugins, leitura de DWG/RV
 
 Tomaz cadastra um projeto real, distribui disciplinas, um projetista recebe a tarefa na fila, registra bloqueio/hora, conclui a etapa e o próximo responsável recebe o handoff. Alessandro visualiza situação, atraso, responsável e tempo acumulado.
 
+## Teste do cliente
+
+Por SPEC, não por task. Nesta fase são sete testes, um por SPEC, quando todas as tasks da SPEC estiverem no ar: login e papéis (SPEC-1-001), cadastro do projeto (SPEC-1-002), fluxo no Kanban (SPEC-1-003), fila e bloqueio (SPEC-1-004), handoff e falha (SPEC-1-005), touch time e baseline (SPEC-1-006) e painel com exportação (SPEC-1-007). O roteiro de cada um está na seção `## Teste humano do cliente` da SPEC. As tasks de prova continuam fechando pela prova automática e a demonstração final (T1.39) segue sendo o aceite da fase. Regra completa em `AGENTS.md`.
+
 ## Critérios de aceite
 
 - **CA-1-01:** usuário sem permissão não acessa projeto restrito.
@@ -111,3 +115,4 @@ Fase encerrada somente após demonstração, evidências dos CAs e aprovação h
 | T1.38 | Teste humano da SPEC-1-007: conferir painel×CSV, filtros e evidência de backup/restauração | Alessandro + Tomaz | SPEC-1-007 | Checklist de execução da SPEC-1-007 | Capturas + CSV reconciliado + relatório de restore | Checklist assinado | T1.36 e T1.37 concluídas | Planejada |
 | T1.39 | Demonstração final da Fase 1: projeto piloto percorre o fluxo completo com handoffs, bloqueio e touch time | Tomaz + Kim | Fase 1 | CA-1-08 | Demonstração visível da fase | Vídeo da demonstração + evidências dos CAs | T1.38 concluída | Planejada |
 | T1.40 | Consolidar baseline “antes” em modo sombra e declarar (ou marcar inconclusivo) com o cliente | Kim + Tomaz | Fase 1 | CA-1-09, CA-1-16 | Saída da fase (baseline conclusivo ou inconclusivo) | Dataset baseline + decisão registrada | T1.39 concluída | Planejada |
+- 30/10: teste do cliente passa a ser por SPEC (sete na fase, um por SPEC). O ritmo deixa de pedir autorização e teste a cada task; a demonstração final (T1.39) continua sendo o aceite da fase.

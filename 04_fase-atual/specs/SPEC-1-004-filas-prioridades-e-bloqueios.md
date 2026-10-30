@@ -71,7 +71,17 @@ Cada pessoa enxerga uma fila acionável de trabalho ordenada por prioridade e pr
 | T1.19 | Implementar reatribuição e mudança de prioridade auditadas (antes/depois) e visão do coordenador por equipe | Executor (Maestro) | CA-1-004-06, CA-1-004-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-004 (permissão de equipe) | Teste de acesso cruzado negado + histórico de reatribuição | T1.18 concluída | Planejada |
 | T1.20 | Teste humano da SPEC-1-004: registrar, revisar e resolver bloqueio; validar fila e reatribuição | Tomaz + coordenador | Checklist de execução da SPEC-1-004 | Capturas das filas + histórico de bloqueios | Checklist assinado | T1.19 concluída | Planejada |
 
+## Teste humano do cliente
+
+- **Ritmo:** construir as tasks vinculadas em sequência, sem pedir autorização nem teste a cada task.
+- **Quando:** quando T1.17 a T1.19 estiverem no ar. T1.20 é este teste.
+- **Quem testa:** Tomaz e o coordenador da equipe do projeto piloto.
+- **Passos:** 1) abrir a fila do projetista e conferir a ordem (bloqueio vencido, urgente, alta, normal, baixa e prazo) e os filtros; 2) tentar salvar um bloqueio sem dono e sem data de revisão e conferir a recusa; 3) registrar o bloqueio completo, deixar um vencer e conferir o destaque sem o card mudar de etapa; 4) resolver o bloqueio e conferir autor, horário e resolução no histórico; 5) reatribuir a atividade e mudar a prioridade, conferindo o antes e o depois no histórico, e conferir que o projetista não vê a fila da outra equipe.
+- **Resultado esperado:** a fila ordena de forma estável; o bloqueio só existe completo e é rastreável; a reatribuição fica auditada e o acesso cruzado é negado (CA-1-004-01 a CA-1-004-07).
+- **Evidência do aceite:** mensagem do coordenador confirmando a fila, o ciclo do bloqueio e a reatribuição, registrada no changelog.
+
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 30/10/2026 | Teste por SPEC | SPEC-1-004 / T1.20 | Seção `## Teste humano do cliente`: um roteiro único (fila, ciclo do bloqueio e reatribuição). T1.20 é este teste. |
