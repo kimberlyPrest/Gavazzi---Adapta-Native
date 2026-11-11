@@ -111,3 +111,13 @@ F1 semanas 1–3; F2 4–6; F3 7–9; F4 10–13; F5 14–16. Dependência não 
 ## 10. Critério de aceite geral
 
 O escopo é aceito quando Kim e CSM/cliente validarem o objetivo, os fora de escopo, as definições operacionais dos KPIs, a sequência das cinco fases e os papéis. A publicação documental foi autorizada pela Kim em 09/09/2026. SPECs, tasks e implementação serão tratadas separadamente.
+
+## 11. Emendas
+
+| Data | Emenda | Aprovação |
+|---|---|---|
+| 11/11/2026 | **Fase 1 — SPEC-1-008 registrada:** papéis Diretor e Administrativo; revisão técnica pelo coordenador do projeto; calendário de entregas com janelas e feriados; timer ligado à entrega; indicadores de entregas; importação do Planner. Construída pela equipe em 05–06/11. | Kim |
+| 11/11/2026 | **Fase 2 — checklists pela interface:** os checklists de entrada e de revisão são criados e mantidos na própria Central; os coordenadores cadastram os reais no teste final da fase. O mapeamento prévio deixa de ser pré-requisito. | Kim |
+| 11/11/2026 | **Fase 2 — pastas padrão no OneDrive:** criar projeto na Central cria a estrutura padrão de pastas no OneDrive (cliente › local › projeto › disciplina). A Central só cria pastas; nunca apaga, move ou renomeia. | Kim |
+| 11/11/2026 | **Fase 2 — emissão:** o registro de emissão ligado à entrega do calendário entra na Fase 2, porque o K3 depende dele. A Fase 5 mantém a trilha completa de emissão e a medição final. | Kim |
+| 11/11/2026 | **Fases 3, 4 e 5:** conteúdo e sequência a decidir pela Kim antes da próxima liberação. | Kim |

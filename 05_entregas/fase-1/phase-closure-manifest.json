@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "adapta-phase-closure/v1",
+  "phase": 1,
+  "closedAt": "2026-11-11T00:00:00-03:00",
+  "closedBy": "Kim",
+  "activeDigest": "ea3edf8a9d32420cec6cf273fe699daa4a8f8bb89c3bbfe42a9fbd0545a0ca93",
+  "files": [
+    {
+      "relative": "fase.md",
+      "sha256": "48fefc34304e5d7dedd7f076c85c0264bb646d09fc00c36022dd9f9bcb04ac0e"
+    },
+    {
+      "relative": "specs/SPEC-1-001-acesso-e-papeis.md",
+      "sha256": "033e1acc76238dc333b88c04eae971e24471965ff265707103d1ded141205a8c"
+    },
+    {
+      "relative": "specs/SPEC-1-002-cadastro-de-projetos-e-disciplinas.md",
+      "sha256": "0bbb8f57db3fb4a90b3fbccd4850b1a262bf2db4911e540edf94dcb2ba669bef"
+    },
+    {
+      "relative": "specs/SPEC-1-003-kanban-e-fluxo-configuravel.md",
+      "sha256": "893647a9de3a82a8d37b05cdbe14432971c327763fdacaa3d40ba2dea40b2369"
+    },
+    {
+      "relative": "specs/SPEC-1-004-filas-prioridades-e-bloqueios.md",
+      "sha256": "629060ce1e28ce676b7ddaeb1521aa8ad80f96f0cc244ff98a100f2329de49ea"
+    },
+    {
+      "relative": "specs/SPEC-1-005-handoffs-e-recuperacao-de-falhas.md",
+      "sha256": "b55fdaf445209f6380bfc08748c061347237c77a07b5494c50622a53020d7572"
+    },
+    {
+      "relative": "specs/SPEC-1-006-touch-time-e-baseline-em-modo-sombra.md",
+      "sha256": "8a5f83dccc9033a88d220f1654e8e65f87356ab7845cc3fa80afb5b77e06dea9"
+    },
+    {
+      "relative": "specs/SPEC-1-007-painel-auditoria-adocao-e-exportacao.md",
+      "sha256": "1f4a582e07ffc15f7d438d1eb275bded9e43aac6f53bab6959bd387df683242b"
+    }
+  ],
+  "pendencias": [
+    "testes do cliente por SPEC não registrados",
+    "T1.39 demonstração final com projeto piloto",
+    "T1.40 decisão do baseline"
+  ],
+  "emendas": [
+    "SPEC-1-008 registrada (implementação do cliente 05-06/11)"
+  ]
+}

@@ -72,3 +72,14 @@
 - 16 requisitos funcionais com fase e critério.
 - Exatamente cinco fases.
 - Nenhuma SPEC ou task gerada antes dos checks humanos.
+
+## Fase 2 (liberada em 11/11/2026)
+
+| Origem | Evidência/decisão | Requisito/contorno | Fase | Prova |
+|---|---|---|---|---|
+| Decisão da Kim 11/11 | checklists configurados pela interface; os reais entram no teste final | RF-07; RN-05/10 | F2 | SPEC-2-001; T2.22 |
+| Briefing K2 | ≥95% na 1ª revisão | checklist congelado e rodadas | F2 | SPEC-2-002/003/005 |
+| Briefing K3 | −50% correções pós-emissão | emissão e correção com origem/severidade | F2 | SPEC-2-004/005 |
+| SPEC-1-008 (05–06/11) | revisão técnica pelo coordenador; entregas no calendário | revisor = coordenador; emissão ligada à entrega | F2 | SPEC-2-003/004 |
+| Reunião 06/10 18:23–20:16 | pastas padrão no OneDrive ao criar projeto | criação automática, sem dupla digitação | F2 | SPEC-2-006 |
+| AC-007 | revisão não mapeada | checklist configurável em vez de pré-requisito | F2 | SPEC-2-001; T2.22 |

@@ -1,123 +1,114 @@
-# Fase 1 — Central Operacional e Baseline
+# Fase 2 — Revisão com checklist, emissão e pastas padrão
 
 ## Objetivo
 
-Entregar o sistema aprovado na reunião de 02/09: uma visão centralizada dos projetos, etapas, responsáveis, prioridades, filas e handoffs, operando pelo menos um projeto real e coletando os dados necessários para medir a operação.
+Fazer a revisão dos projetos acontecer dentro da Central: cada disciplina recebe o checklist certo, o coordenador revisa item por item, o que não está conforme volta para correção com motivo e responsável, a emissão só sai depois da revisão aprovada e os indicadores de qualidade (K2 e K3) passam a ser calculados. Ao criar um projeto, a Central também cria a estrutura padrão de pastas no OneDrive, para que todo projeto nasça no mesmo padrão.
+
+## Decisões que valem para esta fase (Kim, 11/11/2026)
+
+- **Checklists configuráveis pela interface.** Os checklists não são pré-requisito da fase: o sistema permite criar e manter os checklists de entrada e de revisão por disciplina pela tela. Os coordenadores cadastram os checklists reais no teste final da fase (T2.22).
+- **Pastas padrão no OneDrive.** Criar um projeto na Central cria a estrutura padrão de pastas no OneDrive (cliente › local/filial › projeto › disciplina › subpastas do modelo). O modelo de pastas também é configurável pela tela.
+- **Revisor = coordenador do projeto.** É o que já vale no sistema desde a SPEC-1-008.
 
 ## Inclui
 
-- autenticação e papéis mínimos;
-- cadastro de cliente, projeto, tipologia, disciplinas, prazo e responsáveis;
-- etapas configuráveis por fluxo;
-- Kanban/pipe e fila individual;
-- prioridade conforme política homologada;
-- bloqueio com motivo, responsável e prazo;
-- handoff que cria atividade para o próximo responsável;
-- histórico de transições;
-- apontamento simples de touch time;
-- painel de projetos por etapa, atraso, bloqueio e responsável;
-- protocolo de baseline definido com o cliente e coleta “antes” em modo sombra, antes da ativação do novo fluxo.
+- modelos de checklist por disciplina e por tipo (entrada e revisão), com versões;
+- checklist aplicado e congelado em cada disciplina do projeto;
+- checklist de entrada com pendência de entrada (dono e prazo);
+- rodadas de revisão com resultado item a item, retorno para correção e nova rodada;
+- exceção técnica decidida por pessoa autorizada, com justificativa;
+- registro de emissão ligado à entrega do calendário (revisão R00, R01…);
+- registro de correção após a emissão, com origem e severidade;
+- indicadores K2 e K3, retorno para correção e rodadas por pessoa, com exportação;
+- modelo de pastas configurável e criação automática das pastas no OneDrive.
 
 ## Não inclui
 
-Checklist técnico detalhado, biblioteca de padrões, plugins, leitura de DWG/RVT, geração de tabelas ou validação automática.
+Leitura automática de DWG/RVT/PDF, IA que avalie o projeto, plugins, biblioteca técnica Revit, envio de arquivos ou e-mails para clientes e qualquer apagar, mover ou renomear arquivos no OneDrive.
 
 ## Preparação da fase
 
-- confirmar a identidade documental durante o cadastro inicial;
-- escolher o projeto e a tipologia piloto;
-- definir protocolo de baseline com amostra, relógio, exclusões e período em modo sombra;
-- configurar fluxo, etapas, alçadas, prioridade e SLA com Tomaz e coordenadores;
-- definir papéis, conta corporativa e política de credenciais.
+- **Acesso Microsoft (T2.17):** um administrador do Microsoft 365 da Gavazzi libera o acesso de arquivos para o aplicativo que a Central já usa no login e informa a pasta raiz dos clientes no OneDrive/SharePoint. Pode ser feito a qualquer momento da fase; só a SPEC-2-006 depende disso.
+- **Modelo de pastas:** foto ou lista da estrutura de pastas padrão que todo projeto deve ter (combinado na reunião de 06/10).
+- Os checklists **não** precisam estar prontos antes: são cadastrados no fim (T2.22).
+
+## SPECs
+
+| SPEC | Resultado |
+|---|---|
+| SPEC-2-001 | Modelos de checklist configuráveis pela interface |
+| SPEC-2-002 | Checklist aplicado ao projeto e checklist de entrada |
+| SPEC-2-003 | Revisão, retorno para correção e exceção |
+| SPEC-2-004 | Emissão e correções após a emissão |
+| SPEC-2-005 | Indicadores de qualidade (K2 e K3) |
+| SPEC-2-006 | Pastas padrão no OneDrive |
 
 ## Demonstração visível
 
-Tomaz cadastra um projeto real, distribui disciplinas, um projetista recebe a tarefa na fila, registra bloqueio/hora, conclui a etapa e o próximo responsável recebe o handoff. Alessandro visualiza situação, atraso, responsável e tempo acumulado.
+Tomaz cria um projeto real e as pastas aparecem no OneDrive no padrão. A disciplina recebe o checklist de entrada; a pendência de entrada é resolvida. O projetista conclui e o coordenador revisa com o checklist cadastrado pelos coordenadores: dois itens não conformes voltam para correção, a segunda rodada é aprovada e a emissão R00 é registrada na entrega do calendário. Alessandro vê o K2 do projeto e o retorno para correção no painel.
 
 ## Teste do cliente
 
-Por SPEC, não por task. Nesta fase são sete testes, um por SPEC, quando todas as tasks da SPEC estiverem no ar: login e papéis (SPEC-1-001), cadastro do projeto (SPEC-1-002), fluxo no Kanban (SPEC-1-003), fila e bloqueio (SPEC-1-004), handoff e falha (SPEC-1-005), touch time e baseline (SPEC-1-006) e painel com exportação (SPEC-1-007). O roteiro de cada um está na seção `## Teste humano do cliente` da SPEC. As tasks de prova continuam fechando pela prova automática e a demonstração final (T1.39) segue sendo o aceite da fase. Regra completa em `AGENTS.md`.
+Por SPEC, não por task, como na Fase 1: seis testes, um por SPEC, quando todas as tasks da SPEC estiverem no ar. O roteiro está em `## Teste humano do cliente` de cada SPEC. No fim, os coordenadores cadastram os checklists reais (T2.22) e a demonstração final (T2.23) é o aceite da fase.
 
 ## Critérios de aceite
 
-- **CA-1-01:** usuário sem permissão não acessa projeto restrito.
-- **CA-1-02:** projeto é criado com campos mínimos e aparece no Kanban.
-- **CA-1-03:** transição válida cria histórico com usuário e horário.
-- **CA-1-04:** handoff cria tarefa na fila do próximo responsável.
-- **CA-1-05:** bloqueio não é salvo sem motivo, dono e revisão/prazo.
-- **CA-1-06:** touch time pode ser registrado por etapa sem recadastro técnico.
-- **CA-1-07:** painel exibe projetos por etapa, atraso, bloqueio e responsável.
-- **CA-1-08:** pelo menos um projeto piloto percorre o fluxo homologado da Entrada pendente até Aprovado em ambiente de validação.
-- **CA-1-09:** baseline “antes” é coletado em modo sombra, identificado separadamente e é exportável/reproduzível.
-- **CA-1-10:** trilha de auditoria registra mudança de prioridade e responsável.
-- **CA-1-11:** falha de handoff/notificação fica visível, pode ser reprocessada sem duplicar tarefa e não perde histórico.
-- **CA-1-12:** transições concorrentes não sobrescrevem silenciosamente estado ou responsável.
-- **CA-1-13:** alteração de configuração pode ser revertida com histórico.
-- **CA-1-14:** conta revogada perde acesso; política de credenciais não grava segredo em logs/documentos.
-- **CA-1-15:** retenção, backup e restauração dos dados operacionais têm teste documentado.
-- **CA-1-16:** completude de apontamentos e uso por papel é mensurada; o limiar padrão para leitura conclusiva é 80% de adoção e 80% de completude; abaixo disso, a medição é inconclusiva.
+- **CA-2-01:** checklist de entrada e de revisão pode ser criado, editado e publicado pela interface, por disciplina, sem mexer em código.
+- **CA-2-02:** editar um checklist publicado cria uma nova versão; projetos que já usam a versão anterior não mudam.
+- **CA-2-03:** cada disciplina do projeto recebe a versão vigente do checklist, que fica congelada para aquela disciplina.
+- **CA-2-04:** item de entrada faltante gera pendência com dono e prazo; item crítico pendente impede o avanço para "Pronto".
+- **CA-2-05:** "não se aplica" exige justificativa.
+- **CA-2-06:** revisão reprovada devolve para "Em correção" com itens, motivo e responsável; a nova rodada preserva a anterior.
+- **CA-2-07:** exceção técnica só é aceita por coordenador/administrador, com justificativa e registro de quem decidiu.
+- **CA-2-08:** emissão só é registrada com revisão aprovada e fica ligada à entrega e ao número da revisão.
+- **CA-2-09:** correção após a emissão é registrada com origem, severidade e validade, e cria atividade de correção.
+- **CA-2-10:** K2 e K3 são calculados pelas fórmulas do escopo, batem com a exportação e aparecem como inconclusivos quando a amostra é pequena.
+- **CA-2-11:** criar projeto cria a estrutura de pastas do modelo no OneDrive e grava o link no projeto, sem duplicar pastas existentes.
+- **CA-2-12:** a Central nunca apaga, move ou renomeia nada no OneDrive; falha de criação aparece na caixa de falhas e pode ser reprocessada.
 
-## Checklist manual
+## Pendências herdadas da Fase 1
 
-- [ ] Entrar como Tomaz, coordenador e projetista.
-- [ ] Criar projeto piloto e disciplinas.
-- [ ] Validar filas e handoffs.
-- [ ] Testar bloqueio e retorno.
-- [ ] Conferir histórico e painel.
-- [ ] Exportar dados do baseline.
+Não bloqueiam as tasks desta fase.
 
-## Saída da fase
-
-Fase encerrada somente após demonstração, evidências dos CAs e aprovação humana. Dados insuficientes não impedem o sistema, mas impedem declarar baseline conclusivo.
-
+| Pendência | Quem | Observação |
+|---|---|---|
+| Testes do cliente por SPEC da Fase 1 ainda não registrados | Tomaz | Registrar no changelog os testes já feitos com a equipe e os ajustes pedidos |
+| T1.39 — demonstração com o projeto piloto | Tomaz + Kim | Pode ser feita junto com a demonstração da Fase 2 |
+| T1.40 — decisão sobre o baseline | Kim + Tomaz | A decidir com a Kim |
 
 ## Tasks
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
 |---|---|---|---|---|---|---|---|---|
-| T1.01 | Criar fixture de usuários e projetos de teste (5 papéis, 2 projetos, vínculos distintos, 1 conta revogada) | Executor (Maestro) | SPEC-1-001 | Fixture carrega e reflete os vínculos descritos na SPEC | Dados/fixtures da SPEC-1-001 | Script/seed executado e listagem das contas criadas | Repo conectado ao Skip; ambiente de validação ativo | Planejada |
-| T1.02 | Implementar login, sessão de 8h com rotação de token e recuperação por token de uso único (15 min) | Executor (Maestro) | SPEC-1-001 | CA-1-001-07, CA-1-001-11, CA-1-001-12, CA-1-001-14 | TDD GREEN da SPEC-1-001 (recuperação, senha, sessão) | Suíte de testes passando + captura do login e da redefinição | T1.01 concluída | Planejada |
-| T1.03 | Implementar bloqueio após 5 tentativas inválidas em 15 min e mensagens uniformes de login | Executor (Maestro) | SPEC-1-001 | CA-1-001-08, CA-1-001-12, CA-1-001-13 | TDD GREEN da SPEC-1-001 (força bruta) | Teste das 6 tentativas + log de auditoria do bloqueio | T1.02 concluída | Planejada |
-| T1.04 | Implementar matriz de autorização server-side por papel (5 papéis) com 403 auditado | Executor (Maestro) | SPEC-1-001 | CA-1-001-01..06, CA-1-001-09 | TDD GREEN da SPEC-1-001 (matriz de autorização) | Relatório da matriz papel×ação + resposta 403 sem vazamento | T1.02 concluída | Planejada |
-| T1.05 | Implementar revogação de conta/sessão e garantia de ausência de segredo em logs | Executor (Maestro) | SPEC-1-001 | CA-1-001-05, CA-1-001-10 | TDD REFACTOR/REGRESSÃO da SPEC-1-001 (revogação e varredura de logs) | Log de revogação + varredura de logs sem segredo | T1.04 concluída | Planejada |
-| T1.06 | Teste humano da SPEC-1-001: entrar com os 5 papéis e validar a matriz na interface | Tomaz | SPEC-1-001 | Checklist de execução da SPEC-1-001 | Capturas por papel + evidências anexadas | Checklist assinado com capturas | T1.05 concluída | Planejada |
-| T1.07 | Criar fixture de cliente, disciplinas e projetos semelhantes (1 cliente, 2 projetos, 4 disciplinas) | Executor (Maestro) | SPEC-1-002 | Fixture carrega e reflete os dados descritos na SPEC | Dados/fixtures da SPEC-1-002 | Seed executado + listagem | T1.06 concluída | Planejada |
-| T1.08 | Implementar cadastro de cliente/projeto/disciplinas com campos mínimos, responsável por disciplina e detalhe 360º | Executor (Maestro) | SPEC-1-002 | CA-1-002-01, CA-1-002-02, CA-1-002-03 | TDD GREEN da SPEC-1-002 (cadastro vertical) | Suíte passando + captura do detalhe do projeto | T1.07 concluída | Planejada |
-| T1.09 | Implementar alerta de duplicidade, edição auditada e arquivamento sem apagar histórico | Executor (Maestro) | SPEC-1-002 | CA-1-002-04, CA-1-002-05, CA-1-002-06 | TDD REFACTOR/REGRESSÃO da SPEC-1-002 (duplicidade e arquivamento) | Logs de edição/arquivamento + alerta de duplicidade | T1.08 concluída | Planejada |
-| T1.10 | Implementar autorização de criação/edição e validação de link de entrada (somente HTTPS, sem fetch no servidor) | Executor (Maestro) | SPEC-1-002 | CA-1-002-07, CA-1-002-08 | TDD RED/GREEN da SPEC-1-002 (enumeração e links inseguros) | Testes de URL insegura rejeitada + 403 de enumeração | T1.08 concluída | Planejada |
-| T1.11 | Teste humano da SPEC-1-002: cadastrar projeto real com duas disciplinas e validar duplicidade/edição | Tomaz | SPEC-1-002 | Checklist de execução da SPEC-1-002 | Vídeo curto do cadastro + histórico exportado | Checklist assinado | T1.10 concluída | Planejada |
-| T1.12 | Implementar Kanban com os 6 estados da Fase 1 + Bloqueado, filtros e ordenação | Executor (Maestro) | SPEC-1-003 | CA-1-003-01 | TDD GREEN da SPEC-1-003 (Kanban mínimo) | Captura do Kanban com cards de teste | T1.11 concluída | Planejada |
-| T1.13 | Implementar transições validadas server-side (papel + estado) com histórico anterior/novo, autor e horário | Executor (Maestro) | SPEC-1-003 | CA-1-003-02, CA-1-003-03 | TDD GREEN da SPEC-1-003 (máquina de estados) | Suíte de transições + export do histórico | T1.12 concluída | Planejada |
-| T1.14 | Implementar configuração administrativa de etapas (nome/ordem/ativo) versionada e reversível | Executor (Maestro) | SPEC-1-003 | CA-1-003-05, CA-1-003-06, CA-1-003-08 | TDD REFACTOR/REGRESSÃO da SPEC-1-003 (rollback de configuração) | Restauração de versão anterior preservando cards | T1.13 concluída | Planejada |
-| T1.15 | Implementar campos obrigatórios por transição configuráveis pelo administrador | Executor (Maestro) | SPEC-1-003 | CA-1-003-09 | TDD GREEN da SPEC-1-003 (critérios de avanço) | Teste de avanço sem campo obrigatório rejeitado | T1.14 concluída | Planejada |
-| T1.16 | Teste humano da SPEC-1-003: projeto com 2 disciplinas percorre Entrada pendente → Aprovado | Tomaz + coordenador | SPEC-1-003 | CA-1-003-07 | Vídeo do fluxo ponta a ponta | Vídeo + checklist assinado | T1.15 concluída | Planejada |
-| T1.17 | Implementar fila individual e por equipe com ordenação determinística e filtros | Executor (Maestro) | SPEC-1-004 | CA-1-004-01, CA-1-004-02 | TDD GREEN da SPEC-1-004 (ordenação e filtro) | Captura das filas + teste de empate estável | T1.16 concluída | Planejada |
-| T1.18 | Implementar bloqueio com motivo, dono e data de revisão obrigatórios; destaque de bloqueio vencido e resolução auditada | Executor (Maestro) | SPEC-1-004 | CA-1-004-03, CA-1-004-04, CA-1-004-05 | TDD GREEN da SPEC-1-004 (ciclo do bloqueio) | Testes do ciclo do bloqueio + histórico | T1.17 concluída | Planejada |
-| T1.19 | Implementar reatribuição e mudança de prioridade auditadas (antes/depois) e visão do coordenador por equipe | Executor (Maestro) | SPEC-1-004 | CA-1-004-06, CA-1-004-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-004 (permissão de equipe) | Teste de acesso cruzado negado + histórico de reatribuição | T1.18 concluída | Planejada |
-| T1.20 | Teste humano da SPEC-1-004: registrar, revisar e resolver bloqueio; validar fila e reatribuição | Tomaz + coordenador | SPEC-1-004 | Checklist de execução da SPEC-1-004 | Capturas das filas + histórico de bloqueios | Checklist assinado | T1.19 concluída | Planejada |
-| T1.21 | Implementar handoff por transição com criação idempotente da próxima atividade e fallback ao coordenador | Executor (Maestro) | SPEC-1-005 | CA-1-005-01, CA-1-005-02, CA-1-005-03, CA-1-005-06 | TDD GREEN da SPEC-1-005 (handoff e idempotência) | Testes de duplicação/concorrência sem duplicata | T1.20 concluída | Planejada |
-| T1.22 | Implementar caixa de falhas visível com motivo/tentativas e reprocessamento restrito a coordenador/administrador | Executor (Maestro) | SPEC-1-005 | CA-1-005-04, CA-1-005-05, CA-1-005-09 | TDD GREEN da SPEC-1-005 (falha e reprocessamento) | Captura da fila de falhas + log de reprocessamento | T1.21 concluída | Planejada |
-| T1.23 | Implementar notificação interna persistente (não lida → lida) vinculada à atividade correta | Executor (Maestro) | SPEC-1-005 | CA-1-005-08 | TDD GREEN da SPEC-1-005 (notificação) | Teste de leitura registrada + captura | T1.21 concluída | Planejada |
-| T1.24 | Implementar cancelamento/devolução de handoff com justificativa preservando eventos | Executor (Maestro) | SPEC-1-005 | CA-1-005-07 | TDD REFACTOR/REGRESSÃO da SPEC-1-005 (rollback) | Histórico íntegro após devolução | T1.22 concluída | Planejada |
-| T1.25 | Teste humano da SPEC-1-005: simular sucesso, repetição, falha e reprocessamento no fluxo real | Coordenador | SPEC-1-005 | Checklist de execução da SPEC-1-005 | Testes de idempotência + captura da fila de falhas | Checklist assinado | T1.24 concluída | Planejada |
-| T1.26 | Implementar apontamento de touch time (iniciar/pausar/encerrar, 1 timer por usuário, marca antes/depois) | Executor (Maestro) | SPEC-1-006 | CA-1-006-01, CA-1-006-02, CA-1-006-03 | TDD GREEN da SPEC-1-006 (timer) | Testes de sobreposição/pausa + captura | T1.20 concluída | Planejada |
-| T1.27 | Implementar pendência de timer aberto >12h fora do baseline até revisão humana | Executor (Maestro) | SPEC-1-006 | CA-1-006-10 | TDD RED/GREEN da SPEC-1-006 (timer abandonado) | Timer >12h marcado como pendência | T1.26 concluída | Planejada |
-| T1.28 | Implementar correção justificada de evento preservando o original e separação antes/depois | Executor (Maestro) | SPEC-1-006 | CA-1-006-04, CA-1-006-05 | TDD REFACTOR/REGRESSÃO da SPEC-1-006 (edição e grupos) | Evento original preservado + grupos separados | T1.27 concluída | Planejada |
-| T1.29 | Implementar importação CSV histórica com validação por linha, origem/arquivo/data e rejeição de linha inválida | Executor (Maestro) | SPEC-1-006 | CA-1-006-09 | TDD GREEN da SPEC-1-006 (importação por linha) | Relatório de importação com erro por linha | T1.26 concluída | Planejada |
-| T1.30 | Implementar agregação do baseline com amostra/exclusões, marcação de inconclusivo e export CSV reproduzível | Executor (Maestro) | SPEC-1-006 | CA-1-006-06, CA-1-006-07, CA-1-006-08 | TDD GREEN da SPEC-1-006 (agregação e CSV) | CSV conferindo com o painel + cenário inconclusivo | T1.28 e T1.29 concluídas | Planejada |
-| T1.31 | Teste humano da SPEC-1-006: apontar tempo em etapa real e conferir CSV do baseline | Tomaz + projetista | SPEC-1-006 | Checklist de execução da SPEC-1-006 | CSV + vídeo do apontamento | Checklist assinado | T1.30 concluída | Planejada |
-| T1.32 | Implementar painel executivo com cards, filtros e drill-down até os registros origem | Executor (Maestro) | SPEC-1-007 | CA-1-007-01, CA-1-007-02, CA-1-007-03 | TDD GREEN da SPEC-1-007 (painel e drill-down) | Captura do painel + estado vazio explícito | T1.31 concluída | Planejada |
-| T1.33 | Implementar fórmulas de completude e adoção com limiar 80% e marcação de inconclusivo | Executor (Maestro) | SPEC-1-007 | CA-1-007-05, CA-1-007-06, CA-1-007-13, CA-1-007-14 | TDD GREEN da SPEC-1-007 (fixtures 79%/80%) | Teste 79% inconclusivo / 80% conclusivo | T1.32 concluída | Planejada |
-| T1.34 | Implementar export CSV autorizado e auditado (admin/coordenador no escopo) reconciliando com o painel | Executor (Maestro) | SPEC-1-007 | CA-1-007-04, CA-1-007-10 | TDD GREEN da SPEC-1-007 (export e auditoria) | CSV reconciliado + log de exportação | T1.33 concluída | Planejada |
-| T1.35 | Implementar log append-only consultável por papel com retenção de 24 meses | Executor (Maestro) | SPEC-1-007 | CA-1-007-07, CA-1-007-11 | TDD RED/GREEN da SPEC-1-007 (adulteração de log) | Tentativa de alteração negada + política de retenção | T1.32 concluída | Planejada |
-| T1.36 | Implementar backup criptografado com chave em secret externo, retenção de 90 dias e restauração isolada | Executor (Maestro) | SPEC-1-007 | CA-1-007-08, CA-1-007-12 | TDD REFACTOR/REGRESSÃO da SPEC-1-007 (restore) | Relatório de restauração em ambiente isolado | T1.35 concluída | Planejada |
-| T1.37 | Garantir que executivo não altera dados pelo painel (somente leitura) | Executor (Maestro) | SPEC-1-007 | CA-1-007-09 | TDD RED da SPEC-1-007 (tentativa de export/alteração executivo) | Tentativa negada e auditada | T1.33 concluída | Planejada |
-| T1.38 | Teste humano da SPEC-1-007: conferir painel×CSV, filtros e evidência de backup/restauração | Alessandro + Tomaz | SPEC-1-007 | Checklist de execução da SPEC-1-007 | Capturas + CSV reconciliado + relatório de restore | Checklist assinado | T1.36 e T1.37 concluídas | Planejada |
-| T1.39 | Demonstração final da Fase 1: projeto piloto percorre o fluxo completo com handoffs, bloqueio e touch time | Tomaz + Kim | Fase 1 | CA-1-08 | Demonstração visível da fase | Vídeo da demonstração + evidências dos CAs | T1.38 concluída | Planejada |
-| T1.40 | Consolidar baseline “antes” em modo sombra e declarar (ou marcar inconclusivo) com o cliente | Kim + Tomaz | Fase 1 | CA-1-09, CA-1-16 | Saída da fase (baseline conclusivo ou inconclusivo) | Dataset baseline + decisão registrada | T1.39 concluída | Planejada |
+| T2.01 | Implementar modelos de checklist por disciplina e tipo (entrada/revisão), com itens, severidade, rascunho → publicado e versões imutáveis | Executor (Maestro) | SPEC-2-001 | CA-2-001-01..05 | TDD GREEN da SPEC-2-001 (modelo e versões) | Suíte passando + captura do editor | — | Planejada |
+| T2.02 | Implementar duplicar modelo, colar itens (um por linha) e modelos de exemplo marcados como "exemplo" | Executor (Maestro) | SPEC-2-001 | CA-2-001-06, CA-2-001-07 | TDD GREEN da SPEC-2-001 (cópia e colagem) | Captura do modelo duplicado e dos itens colados | T2.01 concluída | Planejada |
+| T2.03 | Teste humano da SPEC-2-001 | Tomaz + coordenador | SPEC-2-001 | Checklist de execução da SPEC-2-001 | Roteiro do teste do cliente | Checklist assinado com capturas | T2.02 concluída | Planejada |
+| T2.04 | Aplicar e congelar a versão vigente do checklist em cada disciplina do projeto, na etapa configurada no Fluxo | Executor (Maestro) | SPEC-2-002 | CA-2-002-01..03 | TDD GREEN da SPEC-2-002 (aplicação e congelamento) | Teste da versão congelada após nova publicação | T2.03 concluída | Planejada |
+| T2.05 | Implementar marcação por item (conforme / não conforme / não se aplica com justificativa) e pendência de entrada que segura o avanço para "Pronto" | Executor (Maestro) | SPEC-2-002 | CA-2-002-04..07 | TDD GREEN da SPEC-2-002 (entrada e avanço) | Teste de avanço negado + captura da pendência | T2.04 concluída | Planejada |
+| T2.06 | Teste humano da SPEC-2-002 | Coordenador + projetista | SPEC-2-002 | Checklist de execução da SPEC-2-002 | Roteiro do teste do cliente | Checklist assinado com capturas | T2.05 concluída | Planejada |
+| T2.07 | Implementar rodada de revisão pelo coordenador do projeto com resultado aprovado/reprovado e retorno para "Em correção" | Executor (Maestro) | SPEC-2-003 | CA-2-003-01..03 | TDD GREEN da SPEC-2-003 (rodada e retorno) | Suíte passando + histórico da rodada | T2.06 concluída | Planejada |
+| T2.08 | Implementar correção pelo projetista e nova rodada preservando as anteriores | Executor (Maestro) | SPEC-2-003 | CA-2-003-04, CA-2-003-05 | TDD GREEN da SPEC-2-003 (nova rodada) | Histórico com duas rodadas | T2.07 concluída | Planejada |
+| T2.09 | Implementar exceção técnica (coordenador/administrador, justificativa, quem decidiu) | Executor (Maestro) | SPEC-2-003 | CA-2-003-06, CA-2-003-07 | TDD RED/GREEN da SPEC-2-003 (exceção sem permissão) | Teste de exceção negada + registro da aceita | T2.07 concluída | Planejada |
+| T2.10 | Teste humano da SPEC-2-003 | Coordenador + projetista | SPEC-2-003 | Checklist de execução da SPEC-2-003 | Roteiro do teste do cliente | Checklist assinado com capturas | T2.09 concluída | Planejada |
+| T2.11 | Implementar registro de emissão ligado à entrega do calendário (número da revisão, data, destinatário, responsável), só com revisão aprovada | Executor (Maestro) | SPEC-2-004 | CA-2-004-01..03 | TDD GREEN da SPEC-2-004 (emissão) | Teste de emissão negada sem aprovação + captura | T2.10 concluída | Planejada |
+| T2.12 | Implementar correção após emissão (origem, severidade, válida/inválida, quem decidiu) com atividade de correção na fila | Executor (Maestro) | SPEC-2-004 | CA-2-004-04..06 | TDD GREEN da SPEC-2-004 (correção pós-emissão) | Captura da correção + atividade criada | T2.11 concluída | Planejada |
+| T2.13 | Teste humano da SPEC-2-004 | Coordenador | SPEC-2-004 | Checklist de execução da SPEC-2-004 | Roteiro do teste do cliente | Checklist assinado com capturas | T2.12 concluída | Planejada |
+| T2.14 | Implementar K2 (1ª rodada) por projeto, disciplina, pessoa e período, com drill-down | Executor (Maestro) | SPEC-2-005 | CA-2-005-01, CA-2-005-02, CA-2-005-05 | TDD GREEN da SPEC-2-005 (fórmula K2) | Teste com fixture de resultado conhecido | T2.13 concluída | Planejada |
+| T2.15 | Implementar K3, retorno para correção e rodadas por pessoa, marcação de inconclusivo e exportação CSV | Executor (Maestro) | SPEC-2-005 | CA-2-005-03, CA-2-005-04, CA-2-005-06 | TDD GREEN da SPEC-2-005 (K3 e CSV) | CSV conferindo com o painel | T2.14 concluída | Planejada |
+| T2.16 | Teste humano da SPEC-2-005 | Alessandro + Tomaz | SPEC-2-005 | Checklist de execução da SPEC-2-005 | Roteiro do teste do cliente | Checklist assinado com capturas | T2.15 concluída | Planejada |
+| T2.17 | Liberar o acesso de arquivos do Microsoft 365 para o aplicativo da Central e informar a pasta raiz dos clientes | Tomaz + administrador Microsoft da Gavazzi | SPEC-2-006 | Pré-condição da SPEC-2-006 | Acesso que só o cliente tem | Confirmação do acesso + caminho da pasta raiz (sem segredo em mensagem) | — | Planejada |
+| T2.18 | Implementar modelo de pastas configurável pela tela, com variáveis (cliente, local, projeto, disciplina) e versões | Executor (Maestro) | SPEC-2-006 | CA-2-006-01, CA-2-006-02 | TDD GREEN da SPEC-2-006 (modelo de pastas) | Captura do editor + prévia da árvore | T2.16 concluída | Planejada |
+| T2.19 | Criar as pastas no OneDrive ao criar o projeto e ao incluir disciplina, de forma idempotente, gravando o link no projeto | Executor (Maestro) | SPEC-2-006 | CA-2-006-03..06 | TDD GREEN da SPEC-2-006 (criação idempotente) | Pastas criadas no OneDrive + link no projeto | T2.17 e T2.18 concluídas | Planejada |
+| T2.20 | Registrar falha de criação na caixa de falhas com reprocessamento e criar pastas para projetos já existentes (simular antes, depois aplicar) | Executor (Maestro) | SPEC-2-006 | CA-2-006-07, CA-2-006-08 | TDD RED/GREEN da SPEC-2-006 (falha e lote) | Captura da falha + relatório da simulação | T2.19 concluída | Planejada |
+| T2.21 | Teste humano da SPEC-2-006 | Tomaz | SPEC-2-006 | Checklist de execução da SPEC-2-006 | Roteiro do teste do cliente | Checklist assinado com capturas do OneDrive | T2.20 concluída | Planejada |
+| T2.22 | Cadastrar os checklists reais de entrada e de revisão pela interface, pelo menos para as disciplinas do projeto da demonstração | Coordenadores (Tomaz organiza) | SPEC-2-001 | CA-2-01 | Teste final de configuração | Checklists publicados (versão 1) por disciplina | T2.21 concluída | Planejada |
+| T2.23 | Demonstração final da Fase 2 com projeto real | Tomaz + Kim | Fase 2 | Demonstração visível | Aceite da fase | Vídeo da demonstração + evidências dos CAs | T2.22 concluída | Planejada |
+
+## Saída da fase
+
+Fase encerrada após a demonstração final (T2.23), os checklists reais publicados e a aprovação da Kim. Sem amostra suficiente, K2 e K3 aparecem como inconclusivos; isso não bloqueia o encerramento, mas não vira resultado.
 
 ## Emendas
 
 | Data | Origem do sinal | Seção | Resumo |
 |---|---|---|---|
-| 30/10/2026 | Teste por SPEC | `## Teste do cliente` | Teste por SPEC, não por task: sete testes na fase, um por SPEC; o ritmo não pede autorização nem teste a cada task e a demonstração final (T1.39) continua sendo o aceite da fase. |
